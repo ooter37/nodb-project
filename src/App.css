@@ -16,18 +16,18 @@
 	align-content: stretch;
 }
 .submit-card {
-
+  height: 60%;
   width: 20%;
 }
 
 .progress {
-
+  height: 60%;
   width: 30%;
   background-color: salmon;
 }
 
 .list-card {
-
+  height: 60%;
   width: 35%;
 }
 
@@ -42,3 +42,17 @@
 	align-content: stretch;
 }
 
+.card-elements {
+	display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: pink;
+}
+
+.balance {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
