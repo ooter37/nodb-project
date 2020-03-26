@@ -5,7 +5,7 @@ import UpdateBalance from './UpdateBalance'
 
 export default function ListCards(props) {
     const mappedCards = props.cards.map(elem => {
-        return <div className='list-cards' key={elem.id}>
+        return <div className='mapped-cards' key={elem.id}>
             <DataRender card={elem.card}/>
             <DataRender balance={elem.balance}/>
             <DeleteCard id={elem.id} deletecard={props.deletecard}/>

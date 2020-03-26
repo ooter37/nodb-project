@@ -14,6 +14,7 @@ constructor() {
   }
   this.addCard = this.addCard.bind(this)
   this.deleteCard = this.deleteCard.bind(this)
+  this.updateBalance = this.updateBalance.bind(this)
 }
 
 componentDidMount() {
@@ -44,25 +45,35 @@ deleteCard(id) {
   })
 }
 
-updateBalance(id) {
-  axios.put(`/api/update_card/${id}`).then(res => {
+updateBalance(id, newBalance) {
+  axios.put(`/api/update_balance/${id}`, {
+    balance: newBalance
+  }).then(res => {
     this.setState({
       cards: res.data
     })
-  })
+  }).catch((err) => console.log(err))
 }
 
   render(){
 
   return (
     <div className="App">
-      <SubmitCard addCard={this.addCard}/>
-      <ListCards 
-      cards={this.state.cards} 
-      deletecard={this.deleteCard}
-      updatebalance={this.updateBalance}
+      <div className='holder'>
+      <div className='submit-card'>
+        <SubmitCard addCard={this.addCard}/>
+      </div>
+      <div className='progress'>
+        PROGRESS BLACK DIAMOND!!
+      </div>
+      <div className='list-card'>
+        <ListCards 
+        cards={this.state.cards} 
+        deletecard={this.deleteCard}
+        updatebalance={this.updateBalance}
       />
-      
+      </div>
+      </div>
     </div>
   );
 }

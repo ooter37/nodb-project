@@ -30,19 +30,20 @@ export default class SubmitCard extends React.Component {
             <input 
                 type='number' 
                 name='newCardNum'
-                value={this.newCardNumber}
+                value={this.state.newCardNumber}
                 onChange={(e) => this.numChangeHandler(e)}
                 placeholder='Card Number'
             />
             <input 
                 type='number' 
                 name='newCardBal'
-                value={this.newCardBalance}
+                value={this.state.newCardBalance}
                 onChange={(e) => this.balChangeHandler(e)}
                 placeholder='Card Balance'
             />
             <button 
-            onClick={() => this.props.addCard(this.state.newCardNumber, this.state.newCardBalance)}
+            onClick={() => {this.setState({newCardNumber: '', newCardBalance: ''})
+              this.props.addCard(this.state.newCardNumber, this.state.newCardBalance)}}
             >Add Card</button>
         </div>
     )

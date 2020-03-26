@@ -1,5 +1,4 @@
 import React from 'react'
-import e from 'express'
 
 export default class UpdateBalance extends React.Component {
     constructor() {
@@ -21,11 +20,12 @@ export default class UpdateBalance extends React.Component {
         <input
         type='number'
         name='newBalance'
-        value={this.newBalance}
+        value={this.state.newBalance}
         onChange={(e) => this.balanceUpdateHandler(e)}
         ></input>
         <button 
-        onClick={()  => this.props.updateBalance(this.state.newBalance)}
+        onClick={()  => {this.setState({newBalance: ''})
+         this.props.updatebalance(this.props.id, this.state.newBalance)}}
         >Update Balance</button>
     </div>
 }
