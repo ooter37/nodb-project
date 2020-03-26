@@ -1,4 +1,5 @@
 import React from "react";
+import Cleave from 'cleave.js/react';
 
 
 export default class SubmitCard extends React.Component {
@@ -25,15 +26,18 @@ export default class SubmitCard extends React.Component {
 
 
   render() {
+    
     return(
-        <div>
-            <input 
-                type='number' 
-                name='newCardNum'
-                value={this.state.newCardNumber}
-                onChange={(e) => this.numChangeHandler(e)}
-                placeholder='Card Number'
-            />
+      <div>
+        
+            <Cleave 
+              options={{creditCard: true}}
+              name='newCardNum'
+              value={this.state.newCardNumber}
+              onChange={(e) => this.numChangeHandler(e)}
+              placeholder='Card Number'
+              size="40"
+            />            
             <input 
                 type='number' 
                 name='newCardBal'

@@ -1,8 +1,9 @@
 import React from 'react'
 
 export default function DataRender(props) {
-    return <div>
-        <span>{props.card}</span>
-        <span>{props.balance}</span>
+    const {balance, card} = props
+    return <div className='render'>
+        <span>{card}</span>
+        <span>{balance}</span>
     </div>
 }

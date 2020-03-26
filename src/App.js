@@ -43,7 +43,7 @@ deleteCard(id) {
     this.setState({
       cards: res.data
     })
-  })
+  }).catch((err) => console.log(err))
 }
 
 updateBalance(id, newBalance) {
