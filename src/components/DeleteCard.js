@@ -1,8 +1,13 @@
-import React from 'react'
+import React from "react";
 
 export default function DeleteCard(props) {
-    const {id} = props
-    return <div>
-        <button onClick={()  => props.deletecard(id)}>Delete</button>
+  const { id, backgroundPicker, deletecard } = props;
+  return (
+    <div>
+      <button onClick={() => {
+         deletecard(id)
+        
+        }}>Delete</button>
     </div>
+  );
 }

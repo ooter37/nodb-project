@@ -21,11 +21,42 @@
 }
 
 .progress {
-  height: 60%;
+  height: 49%;
   width: 30%;
-
+  /* background-image: url(./media/background.JPG);
+  background-size: cover;
+  position: relative; */
 }
-
+/* .treasure-box1 {
+  position:absolute;
+  left: 150px;
+  top: 10px;
+}
+.diamond {
+  position:absolute;
+  left: 30px;
+  top: 170px;
+}
+.pizza {
+  position:absolute;
+  left: 100px;
+  top: 65px;
+}
+.egg {
+  position:absolute;
+  left: 120px;
+  top: 120px;
+}
+.cash {
+  position:absolute;
+  left: 300px;
+  top: 20px;
+}
+.yacht {
+  position:absolute;
+  left: 0px;
+  top: 300px;
+} */
 .list-card {
   height: 60%;
   width: 35%;
