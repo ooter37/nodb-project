@@ -5,9 +5,6 @@ module.exports = {
     listCards: (req,res,next) => {
         res.status(200).send(cards)
     },
-    progress: (req,res,next) => {
-        // black diamond feature
-    },
     addCard: (req,res,next) => {
         const newCard = {
             id: num,

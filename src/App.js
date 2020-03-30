@@ -65,14 +65,13 @@ class App extends React.Component {
         setImage: yacht
       });
     }
-
   }
   addCard(cardNumber, cardBalance) {
-    let updatedCardBalance = 0
+    let updatedCardBalance = 0;
     if (!cardBalance) {
-       updatedCardBalance = 0
+      updatedCardBalance = 0;
     } else {
-      updatedCardBalance = cardBalance
+      updatedCardBalance = cardBalance;
     }
     axios
       .post("/api/add_card", {
@@ -113,8 +112,10 @@ class App extends React.Component {
   }
 
   render() {
-    const totalBalance = this.state.cards.reduce((acc, curr) => acc += parseInt(curr.balance), 0)
-    // console.log(totalBalance)
+    const totalBalance = this.state.cards.reduce(
+      (acc, curr) => (acc += parseInt(curr.balance)),
+      0
+    );
     return (
       <div className="App">
         <div className="holder">
@@ -125,9 +126,10 @@ class App extends React.Component {
             />
           </div>
           <div className="progress">
-            <Progress 
-            setImage={this.state.setImage}
-            totalBalance={totalBalance} 
+            <h1 className='header'> TREASURES: </h1>
+            <Progress
+              setImage={this.state.setImage}
+              totalBalance={totalBalance}
             />
           </div>
           <div className="list-card">

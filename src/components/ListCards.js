@@ -22,8 +22,8 @@ export default function ListCards(props) {
           </div>
           <div className="card-labels">
             <div className="card-number">
-              <pre>Balance: $</pre>
-              <DataRender balance={elem.balance.toLocaleString("en-US")} />
+              <pre>Balance: </pre>
+              <DataRender balance={elem.balance.toLocaleString('en-US', {style:'currency', currency:'USD'})} />
             </div>
             <UpdateBalance id={elem.id} updatebalance={updatebalance} />
           </div>

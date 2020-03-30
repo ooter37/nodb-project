@@ -23,7 +23,7 @@
 .progress {
   height: 49%;
   width: 30%;
-  display: flex;
+ 
   /* background-image: url(./media/background.JPG);
   background-size: cover;
   position: relative; */
@@ -131,3 +131,8 @@
   padding-right: auto;
 }
 
+.header {
+  font-weight: bolder;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
