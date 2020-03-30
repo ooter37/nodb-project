@@ -14,16 +14,16 @@ export default function ListCards(props) {
               <pre>Card Number: </pre>
               <DataRender card={elem.card} />
             </div>
-            <DeleteCard 
-            id={elem.id} 
-            deletecard={deletecard} 
-            backgroundPicker={props.backgroundPicker}
+            <DeleteCard
+              id={elem.id}
+              deletecard={deletecard}
+              backgroundPicker={props.backgroundPicker}
             />
           </div>
           <div className="card-labels">
             <div className="card-number">
               <pre>Balance: $</pre>
-              <DataRender balance={elem.balance} />
+              <DataRender balance={elem.balance.toLocaleString("en-US")} />
             </div>
             <UpdateBalance id={elem.id} updatebalance={updatebalance} />
           </div>

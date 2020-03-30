@@ -23,6 +23,7 @@
 .progress {
   height: 49%;
   width: 30%;
+  display: flex;
   /* background-image: url(./media/background.JPG);
   background-size: cover;
   position: relative; */
@@ -106,3 +107,27 @@
   font-weight: bold;
   padding-bottom: 10px;
 }
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+.filler {
+  background: gold;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+  line-height: 20px;
+
+}
+
+.progress-bar-wealth {
+  padding-top: 10px;
+  padding-left: auto;
+  padding-right: auto;
+}
+
