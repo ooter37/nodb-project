@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import SubmitCard from "./components/SubmitCard.js";
+import CheckCard from './components/CheckCard'
 import ListCards from "./components/ListCards";
 import Progress from "./components/Progress";
 import "./App.css";
@@ -97,6 +98,11 @@ class App extends React.Component {
       })
       .catch(err => console.log(err));
   }
+  checkCard(number) {
+    axios.get(`/api/card?card=${number}`).then( res => {
+      window.alert(res.data)
+    })
+  }
 
   updateBalance(id, newBalance) {
     axios
@@ -123,6 +129,9 @@ class App extends React.Component {
             <SubmitCard
               addCard={this.addCard}
               backgroundPicker={this.backgroundPicker}
+            />
+            <CheckCard
+            checkcard={this.checkCard}
             />
           </div>
           <div className="progress">

@@ -32,6 +32,17 @@ module.exports = {
             cards.splice(index,1)
         }
         res.status(200).send(cards)
+    },
+    checkCard: (req,res,next) => {
+        console.log('from query ', req.query)
+        const checkCardNumber = cards.filter(elem => {
+            return elem.card === req.query.card
+        })
+        if(checkCardNumber.length){
+            res.status(200).send('We have it')
+        } else {
+            res.status(200).send('Not yet....')
+        }
     }
 
 }
